@@ -1,0 +1,6 @@
+**/.DS_Store
+**/scratch/
+venv/
+*.egg-info/
+**/__pycache__/
+*.swp
