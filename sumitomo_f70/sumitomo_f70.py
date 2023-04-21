@@ -3,7 +3,15 @@ import serial
 from serial.tools.list_ports import comports
 
 def make_checksum(source: bytes, fixed_value: int = 0xA001) -> str:
-    '''Makes crc-16 modbus checksums for communication'''
+    '''Makes crc-16 modbus checksums for communication
+
+    This is for internal use. In normal operation, this shouldn't need to be
+    accessed
+
+    Args:
+        source: ASCII encoded byte string to checksum
+        fixed_value: preset fixed value used in checksum calculation
+    '''
     crc = 0xffff
     for _char in source:
         crc ^= _char
@@ -46,7 +54,7 @@ class SumitomoF70:
                 self.connection.reset_output_buffer()
                 self.connection.reset_input_buffer()
             else:
-                raise ConnectionError(f'No device matching {com_port} found')
+                raise ConnectionError('No device matching {} found'.format(com_port))
 
     def __enter__(self):
         return self

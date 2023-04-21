@@ -10,7 +10,7 @@ sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Unofficial Sumitomo (SHI) Cryogenics F-70 Helium Compressor Python Driver'
+project = 'F-70 Helium Compressor Driver'
 copyright = '2023, xkstein'
 author = 'xkstein'
 

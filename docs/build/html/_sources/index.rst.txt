@@ -6,6 +6,10 @@
 Unofficial Sumitomo F-70 Python Driver Documentation!
 =====================================================
 
+This is an **unofficial** python driver for monitoring and controlling *Sumitomo (SHI) Cryogenics F-70 Helium Compressors* through the RS232 serial port. 
+
+**NOTE:** this requires firmware version 1.6 or higher.
+
 .. toctree::
    usage
    modules

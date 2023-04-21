@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="sumitomo_f70" href="modules.html" /><link rel="prev" title="Unofficial Sumitomo F-70 Python Driver Documentation!" href="index.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2023.03.27 -->
-        <title>Usage - Unofficial Sumitomo (SHI) Cryogenics F-70 Helium Compressor Python Driver documentation</title>
+        <title>Usage - F-70 Helium Compressor Driver documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Unofficial Sumitomo (SHI) Cryogenics F-70 Helium Compressor Python Driver  documentation</div></a>
+      <a href="index.html"><div class="brand">F-70 Helium Compressor Driver  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">Unofficial Sumitomo (SHI) Cryogenics F-70 Helium Compressor Python Driver  documentation</span>
+  <span class="sidebar-brand-text">F-70 Helium Compressor Driver  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -206,12 +206,13 @@
 </section>
 <section id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this heading">#</a></h2>
+<p>After finding the com port which the helium compressor is attached to, you can access information or send commands like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sumitomo_f70</span> <span class="kn">import</span> <span class="n">SumitomoF70</span>
 
 <span class="k">with</span> <span class="n">SumitomoF70</span><span class="p">(</span><span class="n">com_port</span><span class="o">=</span><span class="s1">&#39;&lt;your com port&gt;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f70</span><span class="p">:</span>
-    <span class="c1"># Insert code here</span>
-    <span class="c1"># Example:</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="n">f70</span><span class="o">.</span><span class="n">read_status_bits</span><span class="p">()</span>
+    <span class="c1"># Insert commands here (full list in docs)</span>
+    <span class="c1"># For example:</span>
+    <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">,</span> <span class="n">t4</span> <span class="o">=</span> <span class="n">f70</span><span class="o">.</span><span class="n">read_all_temperatures</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
